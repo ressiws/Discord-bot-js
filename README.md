@@ -6,7 +6,7 @@
 ![](https://img.shields.io/github/license/ressiws/Discord-bot-js?style=for-the-badge)
 
 ### :wrench: Prerequisites
-- `Node.js` 16.9.0+ & `NPM` 
+- `Node.js` 16.9.0+ (https://nodejs.org/en/) & `NPM` 
 - `Discord.js v14` (https://www.npmjs.com/package/discord.js)
 - `applications.commands` scope enabled on the [Discord Developer Portal](https://discord.com/developers/applications) (Required for Slash Commands)
 
