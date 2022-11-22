@@ -10,6 +10,13 @@
 - `Discord.js v14` (https://www.npmjs.com/package/discord.js)
 - `applications.commands` scope enabled on the [Discord Developer Portal](https://discord.com/developers/applications) (Required for Slash Commands)
 
+### 🌠 How To Use
+- Clone repository
+- Go to the [Discord Developer Portal](https://discord.com/developers/applications) and grab your bot token.
+- Open config.json.
+- Paste your token on the `token` property.
+- Open the folder with Visual studios code, Open terminal (CTRL + SHIFT + Ç) and write "node ."
+
 ### 📢 Notes
 - Should any zero-day issue arise during the usage of this product, we recommend the user currently experiencing said issue to open an issue in the github repository of this product in order to get further assistance.
 
