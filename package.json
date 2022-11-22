@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "discord.js": "^14.6.0",
+    "glob": "^8.0.3",
+    "path": "^0.12.7",
+    "util": "^0.12.5",
+    "winston": "^3.8.2"
+  },
+  "name": "discord-bot-javascript",
+  "version": "1.0.0",
+  "description": "Discord-bot Template using Javascript",
+  "main": "src/core/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Swisser",
+  "license": "ISC"
+}
