@@ -6,9 +6,16 @@
 ![](https://img.shields.io/github/license/ressiws/Discord-bot-js?style=for-the-badge)
 
 ### :wrench: Prerequisites
-- `Node.js` 16.9.0+ & `NPM` 
+- `Node.js` 16.9.0+ (https://nodejs.org/en/) & `NPM` 
 - `Discord.js v14` (https://www.npmjs.com/package/discord.js)
 - `applications.commands` scope enabled on the [Discord Developer Portal](https://discord.com/developers/applications) (Required for Slash Commands)
+
+### 🌠 How To Use
+- Clone repository
+- Go to the [Discord Developer Portal](https://discord.com/developers/applications) and grab your bot token.
+- Open config.json.
+- Paste your token on the `token` property.
+- Start the bot.
 
 ### 📢 Notes
 - Should any zero-day issue arise during the usage of this product, we recommend the user currently experiencing said issue to open an issue in the github repository of this product in order to get further assistance.
