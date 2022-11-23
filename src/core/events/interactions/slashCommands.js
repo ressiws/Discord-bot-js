@@ -1,4 +1,5 @@
 const { ChatInputCommandInteraction } = require("discord.js");
+const { loggers } = require("winston");
 
 module.exports = {
     name: "interactionCreate",
@@ -12,12 +13,12 @@ module.exports = {
             ephemeral: true
         });
 
-        if (command.developer && interaction.user.id !== "743904375776346133") 
+        if (command.developer && interaction.user.id !== bot.config.developer_id) 
             return interaction.reply({
                 content: "This command is only available to the developer",
                 ephemeral: true
             });
 
-        command.exeecute(interaction, bot);
+        command.execute(interaction, bot);
     }
 }

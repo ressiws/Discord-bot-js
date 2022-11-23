@@ -1,27 +1,33 @@
-async function loadCommnds(bot) {
+async function loadCommands(bot) {
     const { loadFiles } = require("../utilities/fileLoader");
-    const ascii = require("ascii-table");
-    const table = new ascii().setHeading( "Commands", "Status" );
+
+    logger.info(`\n===========================================\n               LOADING COMMANDS               \n===========================================`)
 
     await bot.commands.clear();
 
     let commandsArray = [];
 
-    const Files = await loadFiles("src//core//commands");
+    const Files = await loadFiles("src/core/commands");
 
+    logger.info(`[LOADER] [COMMANDS] Loading Core Commands...`)
     Files.forEach((file) => {
         const command = require(file);
-        bot.commands.set(command.data.name, command);
-        
-        commandsArray.push(command.data.toJSON());
+        try {
+            logger.info(`   [LOADER] [COMMANDS] Loading ${command.data.name}...`)
 
-        table.addRow(command.data.name, "🟩");
+            bot.commands.set(command.data.name, command);
+            
+            logger.info(`   [LOADER] [COMMANDS] Successfully loaded ${command.data.name}.`)
+
+            commandsArray.push(command.data.toJSON());
+
+        } catch (e) {
+            throw `[COMMANDS] Error while loading commands: ${e.message}\n${e.stack}.`
+        }
     });
-
     bot.application.commands.set(commandsArray);
 
-    console.log(table.toString());
-    logger.info("[ LOADER ] Successfully loaded Command(s).");
+    logger.success(`[LOADER] [COMMANDS] Successfully loaded Core Commands.`)
 }
 
-module.exports = { loadCommnds }
+module.exports = { loadCommands }

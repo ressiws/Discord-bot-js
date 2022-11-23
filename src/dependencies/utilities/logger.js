@@ -50,7 +50,9 @@ class Logger {
                                     ts = ' ☣ ';
                                     break;
                             }
-                            let message = `${ts} ${info.level.toUpperCase()} | ${info.message}`
+                            let max = 7;
+                            let message = `${ts} ${info.level.toUpperCase()}${" ".repeat(Math.max(0, max - info.level.length))} | ${info.message}`  
+                            
                             message = info.obj ? message + ` ${info.obj.stack ? info.obj.stack : (typeof(info.obj) === 'object') ? JSON.stringify(info.obj) : info.obj} | ` : message
                             message = this.log_data ? message + ` log_data:${JSON.stringify(this.log_data)} | ` : message
                             return colorizer.colorize(info.level, message)
