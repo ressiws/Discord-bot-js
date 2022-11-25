@@ -23,5 +23,5 @@
 - Should any zero-day issue arise during the usage of this product, we recommend the user currently experiencing said issue to open an issue in the github repository of this product in order to get further assistance.
 
 ## Copyright and Licencing
-Copyright © 2021-2022 [ressiws](https://github.com/ressiws) swisser.project@gmail.com, [DarkenLM](https://github.com/DarkenLM) thebigergameroficial@gmail.com  
+Copyright © 2021-2022 [ressiws](https://github.com/ressiws) swisser.project@gmail.com 
 This project is under the [GNU v3.0 Licence](./LICENSE)
